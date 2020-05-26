@@ -1,3 +1,4 @@
+import './ImageList.css';
 import React from 'react';
 import ImageCard from './ImageCard';
 
@@ -8,7 +9,7 @@ const ImageList = (props) =>{
     });
 
     return (
-        <div>
+        <div className="image-list">
             {images}
         </div>
     );
