@@ -4,6 +4,7 @@ import VideoItem from './VideoItem';
 //porps be same name as what you gave them in App
 const VideoList  = ({videos,onVideoSelect}) =>{
 
+    //renderedlist is a new array which of <VideoItems>
     const renderedList = videos.map((video)=>{
         //the video here refers to the single video in the map
         //not the list of video in the state
