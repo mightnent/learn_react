@@ -10,7 +10,10 @@ class SongList extends React.Component{
             return(
                 <div className="item" key={song.title}>
                     <div className="right floated content">
-                        <button className="ui button primary">
+                        <button 
+                            className="ui button primary"
+                            onClick={()=>this.props.selectSong(song)}
+                        >
                             Select
                         </button>
                     </div>
@@ -22,7 +25,7 @@ class SongList extends React.Component{
         });
     }
 
-    render(){
+    render(){        
         return(
             <div className="ui divided list">{this.renderList()}</div>
         );
@@ -33,7 +36,8 @@ class SongList extends React.Component{
 //state is everything in redux store
 const mapStateToProps = (state) =>{
     console.log(state);
-    return state
+    
+    return {songs:state.songs}
     
 }
 //in es2015 {a:a} = {a}
